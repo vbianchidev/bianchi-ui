@@ -1,0 +1,14 @@
+// index.scss
+@use 'primitives';
+@use 'light-theme' as light;
+@use 'dark-theme' as dark;
+@use 'mixins' as *;
+
+:root,
+[data-theme='light'] {
+  @include generate-theme(light.$theme-light);
+}
+
+[data-theme='dark'] {
+  @include generate-theme(dark.$theme-dark);
+}

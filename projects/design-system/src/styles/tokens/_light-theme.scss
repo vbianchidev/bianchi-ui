@@ -1,0 +1,27 @@
+@use 'primitives' as *;
+
+$theme-light: (
+  // Primary
+  'color-primary':                 $green-40,
+  'color-on-primary':              $green-100,
+  'color-primary-container':       $green-90,
+  'color-on-primary-container':    $green-10,
+
+  // Superfícies e background (neutral)
+  'color-background':              $neutral-99,
+  'color-on-background':           $neutral-10,
+  'color-surface':                 $neutral-99,
+  'color-on-surface':              $neutral-10,
+  'color-surface-variant':         $neutral-variant-90,
+  'color-on-surface-variant':      $neutral-variant-30,
+
+  // Outline / bordas
+  'color-outline':                 $neutral-variant-50,
+  'color-outline-variant':         $neutral-variant-80,
+
+  // Error
+  'color-error':                   $error-40,
+  'color-on-error':                $error-100,
+  'color-error-container':         $error-90,
+  'color-on-error-container':      $error-10,
+);
