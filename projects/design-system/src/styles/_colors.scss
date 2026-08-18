@@ -1,0 +1,30 @@
+@use 'variables' as vars;
+
+// Funções/Atalhos de variáveis
+$primary: var(--bui-color-primary, #{vars.$color-primary});
+$secondary: var(--bui-color-secondary, #{vars.$color-secondary});
+$error: var(--bui-color-error, #{vars.$color-error});
+
+$surface: var(--bui-color-surface);
+$container: var(--bui-color-container);
+$text-color: var(--bui-color-text);
+$text-color-accent: var(--bui-color-text-accent);
+
+// Mixins utilitários para componentes
+@mixin surface-background {
+  background-color: var(--bui-color-surface);
+  color: var(--bui-color-text-accent);
+}
+
+@mixin container-background {
+  background-color: var(--bui-color-container);
+  color: var(--bui-color-text);
+}
+
+@mixin text-accent {
+  color: var(--bui-color-text-accent);
+}
+
+@mixin text-muted {
+  color: var(--bui-color-text);
+}

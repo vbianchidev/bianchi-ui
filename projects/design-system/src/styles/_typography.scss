@@ -1,0 +1,74 @@
+@use 'variables' as vars;
+
+// Importação das fontes do Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans+Flex:opsz,wght@6..72,100..1000&display=swap');
+
+// Mixins de Tipografia
+@mixin font-sans {
+  font-family: var(--bui-font-family-sans, #{vars.$font-family-sans});
+  font-optical-sizing: auto;
+}
+
+@mixin font-code {
+  font-family: var(--bui-font-family-code, #{vars.$font-family-code});
+  font-feature-settings: 'calt' 1, 'liga' 1;
+}
+
+// Escala tipográfica
+@mixin text-display {
+  @include font-sans;
+  font-size: 2.5rem;      // 40px
+  line-height: 3rem;      // 48px
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@mixin text-heading-1 {
+  @include font-sans;
+  font-size: 2rem;        // 32px
+  line-height: 2.5rem;    // 40px
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+@mixin text-heading-2 {
+  @include font-sans;
+  font-size: 1.5rem;      // 24px
+  line-height: 2rem;      // 32px
+  font-weight: 600;
+}
+
+@mixin text-heading-3 {
+  @include font-sans;
+  font-size: 1.25rem;     // 20px
+  line-height: 1.75rem;   // 28px
+  font-weight: 600;
+}
+
+@mixin text-body {
+  @include font-sans;
+  font-size: 1rem;        // 16px
+  line-height: 1.5rem;    // 24px
+  font-weight: 400;
+}
+
+@mixin text-caption {
+  @include font-sans;
+  font-size: 0.875rem;    // 14px
+  line-height: 1.25rem;   // 20px
+  font-weight: 400;
+}
+
+@mixin text-code-inline {
+  @include font-code;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+
+@mixin text-code-block {
+  @include font-code;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
