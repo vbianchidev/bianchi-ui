@@ -1,7 +1,0 @@
-@use 'sass:map';
-
-@mixin generate-theme($theme-map) {
-  @each $key, $value in $theme-map {
-    --#{$key}: #{$value};
-  }
-}
