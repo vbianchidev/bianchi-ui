@@ -3,3 +3,4 @@
  */
 
 export * from './lib/components/bui-typewriter/bui-typewriter';
+export * from './lib/pipe/fill-null-pipe';
