@@ -1,37 +1,44 @@
 [buiTypewriter] {
   --bui-typewriter-duration: 1s;
-  --bui-typewriter-length: 10;
+  --bui-typewriter-steps: 10;
 
   display: inline-block;
-  width: fit-content;
-
-  overflow: hidden;
   white-space: nowrap;
+  overflow: hidden;
 
   border-right: 2px solid currentColor;
 
   &.bui-typewriter-animation {
     animation:
-      bui-typewriter var(--bui-typewriter-duration) steps(
-        var(--bui-typewriter-length),
-        end
-      ),
+      bui-typewriter
+        var(--bui-typewriter-duration)
+        steps(var(--bui-typewriter-steps), end),
       bui-typewriter-cursor 0.7s step-end infinite;
   }
 }
 
 @keyframes bui-typewriter {
   from {
-    width: 0;
+    clip-path: inset(0 100% 0 0);
   }
 
   to {
-    width: 100%;
+    clip-path: inset(0 0 0 0);
   }
 }
 
 @keyframes bui-typewriter-cursor {
   50% {
     border-color: transparent;
+  }
+}
+
+.bui-typewriter {
+  display: inline-block;
+  width: fit-content;
+
+  [buiTypewriter] {
+    display: inline-block;
+    width: max-content;
   }
 }

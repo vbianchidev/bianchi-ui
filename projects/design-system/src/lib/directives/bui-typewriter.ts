@@ -43,10 +43,15 @@ export class BuiTypewriterDirective implements AfterViewInit, OnDestroy {
     const length = text.length;
     const duration = Math.max(0.5, length * 0.05);
 
-    element.style.setProperty('--bui-typewriter-length', `${length}`);
     element.style.setProperty('--bui-typewriter-duration', `${duration}s`);
+
+    element.style.setProperty('--bui-typewriter-steps', `${length}`);
+
     element.classList.remove('bui-typewriter-animation');
+
+    // Reinicia a animação
     void element.offsetWidth;
+
     element.classList.add('bui-typewriter-animation');
   }
 }
