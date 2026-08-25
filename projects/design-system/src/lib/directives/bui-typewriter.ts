@@ -12,7 +12,7 @@ export class BuiTypewriterDirective implements AfterViewInit, OnDestroy {
     private readonly zone: NgZone,
   ) {}
 
-  ngAfterViewInit(): void {
+  public ngAfterViewInit(): void {
     this.updateAnimation();
 
     this.observer = new MutationObserver(() => {
@@ -28,7 +28,7 @@ export class BuiTypewriterDirective implements AfterViewInit, OnDestroy {
     });
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.observer?.disconnect();
   }
 
@@ -41,17 +41,13 @@ export class BuiTypewriterDirective implements AfterViewInit, OnDestroy {
     }
 
     const length = text.length;
-    const duration = Math.max(0.5, length * 0.05);
-
+    const duration = Math.max(0.5, length * 0.1);
     element.style.setProperty('--bui-typewriter-duration', `${duration}s`);
-
     element.style.setProperty('--bui-typewriter-steps', `${length}`);
-
     element.classList.remove('bui-typewriter-animation');
 
     // Reinicia a animação
     void element.offsetWidth;
-
     element.classList.add('bui-typewriter-animation');
   }
 }

@@ -15,7 +15,7 @@
 }
 
 // Escala tipográfica
-@mixin text-display {
+@mixin display {
   @include font-sans;
   font-size: 2.5rem;      // 40px
   line-height: 3rem;      // 48px
@@ -23,7 +23,7 @@
   letter-spacing: -0.02em;
 }
 
-@mixin text-heading-1 {
+@mixin heading-1 {
   @include font-sans;
   font-size: 2rem;        // 32px
   line-height: 2.5rem;    // 40px
@@ -31,44 +31,90 @@
   letter-spacing: -0.01em;
 }
 
-@mixin text-heading-2 {
+@mixin heading-2 {
   @include font-sans;
   font-size: 1.5rem;      // 24px
   line-height: 2rem;      // 32px
   font-weight: 600;
 }
 
-@mixin text-heading-3 {
+@mixin heading-3 {
   @include font-sans;
   font-size: 1.25rem;     // 20px
   line-height: 1.75rem;   // 28px
   font-weight: 600;
 }
 
-@mixin text-body {
+@mixin body {
   @include font-sans;
   font-size: 1rem;        // 16px
   line-height: 1.5rem;    // 24px
   font-weight: 400;
 }
 
-@mixin text-caption {
+@mixin caption {
   @include font-sans;
   font-size: 0.875rem;    // 14px
   line-height: 1.25rem;   // 20px
   font-weight: 400;
 }
 
-@mixin text-code-inline {
+@mixin button {
+  @include font-sans;
+  font-size: 1.25rem;    // 20px
+  line-height: 1.625rem;   // 26px
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--bui-color-text-accent) !important;
+}
+
+@mixin code-inline {
   @include font-code;
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 400;
 }
 
-@mixin text-code-block {
+@mixin code-block {
   @include font-code;
   font-size: 0.875rem;
   line-height: 1.5rem;
   font-weight: 400;
+}
+
+// Classes utilitárias de tipografia
+.bui-display {
+  @include display;
+}
+
+.bui-heading-1 {
+  @include heading-1;
+}
+
+.bui-heading-2 {
+  @include heading-2;
+}
+
+.bui-heading-3 {
+  @include heading-3;
+}
+
+.bui-body {
+  @include body;
+}
+
+.bui-caption {
+  @include caption;
+}
+
+.bui-button {
+  @include button;
+}
+
+.bui-code-inline {
+  @include code-inline;
+}
+
+.bui-code-block {
+  @include code-block;
 }

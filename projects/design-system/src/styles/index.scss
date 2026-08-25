@@ -1,4 +1,4 @@
-
+@forward 'breakpoints';
 @forward 'variables';
 @forward 'themes';
 @forward 'colors';
@@ -7,3 +7,4 @@
 
 // components
 @forward 'components/typewriter';
+@forward 'components/container';

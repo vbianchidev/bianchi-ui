@@ -12,13 +12,13 @@ $text-color-accent: var(--bui-color-text-accent);
 
 // Mixins utilitários para componentes
 @mixin surface-background {
-  background-color: var(--bui-color-surface);
-  color: var(--bui-color-text-accent);
+  background-color: var(--bui-color-surface) !important;
+  color: var(--bui-color-text-accent) !important;
 }
 
 @mixin container-background {
-  background-color: var(--bui-color-container);
-  color: var(--bui-color-text);
+  background-color: var(--bui-color-container) !important;
+  color: var(--bui-color-text) !important;
 }
 
 @mixin text-accent {
