@@ -1,8 +1,7 @@
 @use '../variables' as vars;
 
-$primary: var(--bui-color-primary, #{vars.$color-primary});
-$secondary: var(--bui-color-secondary, #{vars.$color-secondary});
-$error: var(--bui-color-error, #{vars.$color-error});
+$primary: var(--bui-color-primary);
+$error: var(--bui-color-error);
 
 $surface: var(--bui-color-surface);
 $container: var(--bui-color-container);

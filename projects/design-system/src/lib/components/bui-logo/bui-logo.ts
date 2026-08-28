@@ -35,9 +35,6 @@ export class BuiLogo {
   private readonly defaultHeight = 60;
   private readonly aspectRatio = this.defaultHeight / this.defaultWidth;
 
-  /** Largura desejada (em px). A altura é calculada automaticamente. */
-  width = input<number>(this.defaultWidth);
-
-  /** Altura calculada proporcionalmente à largura. */
-  height = computed(() => this.width() * this.aspectRatio);
+  height = input<number>(this.defaultWidth);
+  width = computed(() => this.height() * this.aspectRatio);
 }

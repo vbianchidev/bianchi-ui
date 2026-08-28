@@ -1,9 +1,9 @@
 @forward 'variables';
-@forward 'themes';
 @forward 'typography';
 
 // Colors
 @forward 'colors/colors-mixins';
+@forward 'colors/colors-themes';
 @forward 'colors/colors-utils';
 
 // Layout & Flex
@@ -11,5 +11,5 @@
 @forward 'layout/flex-mixins';
 @forward 'layout/flex-utils';
 
-// components
+// Components
 @forward 'components/container';

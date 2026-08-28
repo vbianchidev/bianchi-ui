@@ -1,7 +1,8 @@
-@use 'variables' as vars;
+@use '../variables' as vars;
 
 // Tokens do tema Light
 @mixin light-theme-tokens {
+  --bui-color-primary: #{vars.$color-green};
   --bui-color-surface: #{vars.$light-surface};
   --bui-color-container: #{vars.$light-container};
   --bui-color-text: #{vars.$light-text-color};
@@ -10,6 +11,7 @@
 
 // Tokens do tema Dark
 @mixin dark-theme-tokens {
+  --bui-color-primary: #{vars.$color-orange};
   --bui-color-surface: #{vars.$dark-surface};
   --bui-color-container: #{vars.$dark-container};
   --bui-color-text: #{vars.$dark-text-color};
@@ -18,10 +20,7 @@
 
 // Tokens globais estáticos
 @mixin root-tokens {
-  --bui-color-primary: #{vars.$color-primary};
-  --bui-color-secondary: #{vars.$color-secondary};
   --bui-color-error: #{vars.$color-error};
-
   --bui-font-family-sans: #{vars.$font-family-sans};
   --bui-font-family-code: #{vars.$font-family-code};
 
@@ -36,18 +35,18 @@
 
 // Suporte automático para preferência do sistema operacional
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme='light']) {
     @include dark-theme-tokens;
   }
 }
 
 // Troca explícita por atributo ou classe
-[data-theme="light"],
+[data-theme='light'],
 .theme-light {
   @include light-theme-tokens;
 }
 
-[data-theme="dark"],
+[data-theme='dark'],
 .theme-dark {
   @include dark-theme-tokens;
 }
