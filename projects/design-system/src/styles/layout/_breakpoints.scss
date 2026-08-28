@@ -1,0 +1,15 @@
+@use '../variables' as vars;
+
+@mixin media-down($breakpoint) {
+  @media (max-width: #{map-get(vars.$breakpoints, $breakpoint) - 0.02px}) {
+    @content;
+  }
+}
+
+:root {
+  --breakpoint-sm: #{map-get(vars.$breakpoints, sm)};
+  --breakpoint-md: #{map-get(vars.$breakpoints, md)};
+  --breakpoint-lg: #{map-get(vars.$breakpoints, lg)};
+  --breakpoint-xl: #{map-get(vars.$breakpoints, xl)};
+  --breakpoint-xxl: #{map-get(vars.$breakpoints, xxl)};
+}

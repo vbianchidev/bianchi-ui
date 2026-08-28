@@ -1,20 +1,43 @@
 // Cores Primitivas / Brand
-$color-primary: #0B7A75;
-$color-secondary: #E28413;
-$color-error: #9C0D38;
+$color-primary: #0b7a75;
+$color-secondary: #e28413;
+$color-error: #9c0d38;
 
 // Primitivos do Light Theme
-$light-surface: #F3F1EA;
-$light-container: #FFFFFF;
-$light-text-color: #8C8C8C;
+$light-surface: #f3f1ea;
+$light-container: #ffffff;
+$light-text-color: #8c8c8c;
 $light-text-color-accent: #222222;
 
 // Primitivos do Dark Theme
 $dark-surface: #222222;
-$dark-container: #1E1E1E;
-$dark-text-color: #8C8C8C;
-$dark-text-color-accent: #FFFFFF;
+$dark-container: #1e1e1e;
+$dark-text-color: #8c8c8c;
+$dark-text-color-accent: #ffffff;
 
 // Font Families
-$font-family-sans: 'Google Sans Flex', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-$font-family-code: 'Google Sans Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+$font-family-sans: 'Google Sans Flex', Roboto, sans-serif;
+$font-family-code: 'Google Sans Code', Consolas, monospace;
+
+// Breakpoints Scale
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Gap Scale
+$gaps: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  9: 2.5rem,
+  10: 3rem,
+);

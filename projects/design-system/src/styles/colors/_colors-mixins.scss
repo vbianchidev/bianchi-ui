@@ -1,0 +1,17 @@
+@mixin surface-background {
+  background-color: var(--bui-color-surface) !important;
+  color: var(--bui-color-text-accent) !important;
+}
+
+@mixin container-background {
+  background-color: var(--bui-color-container) !important;
+  color: var(--bui-color-text) !important;
+}
+
+@mixin text-accent {
+  color: var(--bui-color-text-accent);
+}
+
+@mixin text-muted {
+  color: var(--bui-color-text);
+}

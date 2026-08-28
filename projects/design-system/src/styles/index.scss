@@ -1,9 +1,15 @@
-@forward 'breakpoints';
 @forward 'variables';
 @forward 'themes';
-@forward 'colors';
 @forward 'typography';
-@forward 'flex';
+
+// Colors
+@forward 'colors/colors-mixins';
+@forward 'colors/colors-utils';
+
+// Layout & Flex
+@forward 'layout/breakpoints';
+@forward 'layout/flex-mixins';
+@forward 'layout/flex-utils';
 
 // components
 @forward 'components/container';

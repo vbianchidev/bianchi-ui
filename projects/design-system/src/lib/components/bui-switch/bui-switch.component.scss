@@ -1,0 +1,48 @@
+:host {
+  display: inline-flex;
+
+  .switch {
+    position: relative;
+
+    width: 2.75rem;
+    height: 1.5rem;
+
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+
+    background: var(--bui-color-surface-hover);
+
+    cursor: pointer;
+
+    transition: background-color 150ms ease;
+  }
+
+  .switch.checked {
+    background: var(--bui-color-primary);
+  }
+
+  .thumb {
+    position: absolute;
+    top: 0.125rem;
+    left: 0.125rem;
+
+    width: 1.25rem;
+    height: 1.25rem;
+
+    border-radius: 50%;
+
+    background: var(--bui-color-surface);
+
+    transition: transform 150ms ease;
+  }
+
+  .switch.checked .thumb {
+    transform: translateX(1.25rem);
+  }
+
+  .switch:focus-visible {
+    outline: 2px solid var(--bui-color-primary);
+    outline-offset: 2px;
+  }
+}

@@ -1,0 +1,18 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Alinhamento em coluna
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Linha com espaço entre os itens e alinhamento vertical central
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
