@@ -32,15 +32,13 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
 })
 export class BuiLogo {
   private readonly defaultWidth = 68;
+  private readonly aspectRatio = 60 / this.defaultWidth;
 
   /** Largura desejada (em px). A altura é calculada automaticamente. */
   width = input<number>(this.defaultWidth);
 
   /** Cor de preenchimento da logo. */
   color = input<string>('#222222');
-
-  /** Proporção original do SVG: 68 (largura) x 60 (altura). */
-  private readonly aspectRatio = 60 / this.defaultWidth;
 
   /** Altura calculada proporcionalmente à largura. */
   height = computed(() => this.width() * this.aspectRatio);
