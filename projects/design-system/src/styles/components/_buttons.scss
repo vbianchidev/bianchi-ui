@@ -1,0 +1,96 @@
+@use '../variables' as vars;
+@use 'sass:map';
+
+$button-colors: (
+  normal: (
+    text: var(--bui-color-text),
+    hover-bg: var(--bui-color-container),
+    hover-bg-strong: var(--bui-color-container),
+    border: var(--bui-color-text),
+  ),
+  primary: (
+    text: var(--bui-color-primary),
+    hover-bg: var(--bui-color-container),
+    hover-bg-strong: var(--bui-color-container),
+    border: var(--bui-color-primary),
+  ),
+);
+
+@mixin button-color($variant) {
+  $c: map.get($button-colors, $variant);
+
+  color: map.get($c, text) !important;
+
+  &:hover {
+    background-color: map.get($c, hover-bg) !important;
+  }
+
+  &:active {
+    background-color: map.get($c, hover-bg-strong) !important;
+  }
+}
+
+%button-reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    background-color: transparent !important;
+  }
+}
+
+.bui-button {
+  @extend %button-reset;
+
+  &:not(.primary) {
+    @include button-color(normal);
+  }
+
+  &.primary {
+    @include button-color(primary);
+  }
+}
+
+.bui-button-outline {
+  @extend %button-reset;
+  border: 1px solid;
+
+  &:not(.primary) {
+    @include button-color(normal);
+    border-color: map.get(map.get($button-colors, normal), border);
+  }
+
+  &.primary {
+    @include button-color(primary);
+    border-color: map.get(map.get($button-colors, primary), border);
+  }
+}
+
+.bui-button-icon {
+  @extend %button-reset;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 50%;
+
+  &:not(.primary) {
+    @include button-color(normal);
+  }
+
+  &.primary {
+    @include button-color(primary);
+  }
+}
