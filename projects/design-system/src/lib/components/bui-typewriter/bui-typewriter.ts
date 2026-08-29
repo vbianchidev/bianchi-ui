@@ -62,7 +62,7 @@ export class BuiTypewriter implements AfterViewInit, OnDestroy {
     }
 
     const length = text.length;
-    const duration = Math.max(0.5, length * 0.1);
+    const duration = Math.max(0.5, length * 0.05);
 
     element.style.setProperty('--bui-typewriter-duration', `${duration}s`);
     element.style.setProperty('--bui-typewriter-steps', `${length}`);
