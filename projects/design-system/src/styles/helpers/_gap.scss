@@ -1,0 +1,15 @@
+@use '../variables' as vars;
+
+@each $key, $value in vars.$gaps {
+  .gap-#{$key} {
+    gap: $value !important;
+  }
+
+  .row-gap-#{$key} {
+    row-gap: $value !important;
+  }
+
+  .col-gap-#{$key} {
+    column-gap: $value !important;
+  }
+}

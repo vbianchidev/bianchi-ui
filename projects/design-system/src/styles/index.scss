@@ -1,18 +1,5 @@
-@forward 'variables';
-@forward 'typography';
-@forward 'reset';
-
-// Colors
-@forward 'colors/colors-mixins';
-@forward 'colors/colors-themes';
-@forward 'colors/colors-utils';
-
-// Layout & Flex
-@forward 'layout/flex-mixins';
-@forward 'layout/flex-utils';
-
-// Components
+@forward 'variables/';
+@forward 'mixins/';
 @forward 'components/';
 
-// Mixins
-@forward 'mixins/';
+@forward 'reset';

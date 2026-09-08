@@ -5,9 +5,9 @@
   margin-inline: auto;
   box-sizing: border-box;
 
-  @each $breakpoint, $min-width in vars.$bui-breakpoints {
+  @each $breakpoint, $min-width in vars.$breakpoints {
     @media (min-width: $min-width) {
-      max-width: map-get(vars.$bui-container-widths, $breakpoint);
+      max-width: map-get(vars.$container-widths, $breakpoint);
     }
   }
 }

@@ -1,0 +1,24 @@
+// Cores Primitivas / Brand
+$color-green: #0b7a75;
+$color-orange: #e28413;
+$color-error: #9c0d38;
+
+// Primitivos do Light Theme
+$light-surface: #f8f8f8;
+$light-container: #ffffff;
+$light-text-color: #7b7b7b;
+$light-text-color-accent: #222222;
+
+// Primitivos do Dark Theme
+$dark-surface: #222222;
+$dark-container: #1e1e1e;
+$dark-text-color: #8c8c8c;
+$dark-text-color-accent: #ffffff;
+
+$primary: var(--bui-color-primary);
+$error: var(--bui-color-error);
+
+$surface: var(--bui-color-surface);
+$container: var(--bui-color-container);
+$text-color: var(--bui-color-text);
+$text-color-accent: var(--bui-color-text-accent);

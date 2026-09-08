@@ -1,16 +1,14 @@
-@use 'variables' as vars;
-
 // Importação das fontes do Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans+Flex:opsz,wght@6..72,100..1000&display=swap');
 
 // Mixins de Tipografia
 @mixin font-sans {
-  font-family: var(--bui-font-family-sans, #{vars.$font-family-sans});
+  font-family: var(--bui-font-family-sans);
   font-optical-sizing: auto;
 }
 
 @mixin font-code {
-  font-family: var(--bui-font-family-code, #{vars.$font-family-code});
+  font-family: var(--bui-font-family-code);
   font-feature-settings:
     'calt' 1,
     'liga' 1;
@@ -82,41 +80,4 @@
   font-size: 0.875rem;
   line-height: 1.5rem;
   font-weight: 400;
-}
-
-// Classes utilitárias de tipografia
-.bui-display {
-  @include display;
-}
-
-.bui-heading-1 {
-  @include heading-1;
-}
-
-.bui-heading-2 {
-  @include heading-2;
-}
-
-.bui-heading-3 {
-  @include heading-3;
-}
-
-.bui-body {
-  @include body;
-}
-
-.bui-caption {
-  @include caption;
-}
-
-.bui-button {
-  @include button;
-}
-
-.bui-code-inline {
-  @include code-inline;
-}
-
-.bui-code-block {
-  @include code-block;
 }

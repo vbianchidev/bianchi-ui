@@ -1,0 +1,35 @@
+.bui-display {
+  @include display;
+}
+
+.bui-heading-1 {
+  @include heading-1;
+}
+
+.bui-heading-2 {
+  @include heading-2;
+}
+
+.bui-heading-3 {
+  @include heading-3;
+}
+
+.bui-body {
+  @include body;
+}
+
+.bui-caption {
+  @include caption;
+}
+
+.bui-button {
+  @include button;
+}
+
+.bui-code-inline {
+  @include code-inline;
+}
+
+.bui-code-block {
+  @include code-block;
+}
