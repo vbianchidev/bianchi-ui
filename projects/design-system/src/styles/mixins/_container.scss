@@ -4,10 +4,12 @@
   width: 100%;
   margin-inline: auto;
   box-sizing: border-box;
+  padding-inline: 1rem;
 
   @each $breakpoint, $min-width in vars.$breakpoints {
     @media (min-width: $min-width) {
       max-width: map-get(vars.$container-widths, $breakpoint);
+      padding-inline: 0;
     }
   }
 }

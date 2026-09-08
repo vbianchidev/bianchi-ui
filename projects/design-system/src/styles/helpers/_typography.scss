@@ -1,35 +1,37 @@
+@use '../mixins/' as mixins;
+
 .bui-display {
-  @include display;
+  @include mixins.display;
 }
 
 .bui-heading-1 {
-  @include heading-1;
+  @include mixins.heading-1;
 }
 
 .bui-heading-2 {
-  @include heading-2;
+  @include mixins.heading-2;
 }
 
 .bui-heading-3 {
-  @include heading-3;
+  @include mixins.heading-3;
 }
 
 .bui-body {
-  @include body;
+  @include mixins.body;
 }
 
 .bui-caption {
-  @include caption;
+  @include mixins.caption;
 }
 
 .bui-button {
-  @include button;
+  @include mixins.button;
 }
 
 .bui-code-inline {
-  @include code-inline;
+  @include mixins.code-inline;
 }
 
 .bui-code-block {
-  @include code-block;
+  @include mixins.code-block;
 }
