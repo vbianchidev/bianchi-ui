@@ -8,10 +8,11 @@
 @forward 'colors/colors-utils';
 
 // Layout & Flex
-@forward 'layout/breakpoints';
 @forward 'layout/flex-mixins';
 @forward 'layout/flex-utils';
 
 // Components
-@forward 'components/container';
-@forward 'components/buttons';
+@forward 'components/';
+
+// Mixins
+@forward 'mixins/';

@@ -1,0 +1,7 @@
+@mixin avatar($size: 8rem) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: var(--bui-color-primary);
+  border: 2px solid var(--bui-color-primary);
+}

@@ -1,0 +1,13 @@
+@use '../variables' as vars;
+
+@mixin container {
+  width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+
+  @each $breakpoint, $min-width in vars.$bui-breakpoints {
+    @media (min-width: $min-width) {
+      max-width: map-get(vars.$bui-container-widths, $breakpoint);
+    }
+  }
+}

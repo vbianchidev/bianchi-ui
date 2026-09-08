@@ -1,0 +1,5 @@
+@use '../mixins' as mixins;
+
+.bui-section {
+  @include mixins.section();
+}

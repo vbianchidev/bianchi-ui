@@ -4,9 +4,9 @@ $color-orange: #e28413;
 $color-error: #9c0d38;
 
 // Primitivos do Light Theme
-$light-surface: #f3f1ea;
+$light-surface: #f8f8f8;
 $light-container: #ffffff;
-$light-text-color: #8c8c8c;
+$light-text-color: #7b7b7b;
 $light-text-color-accent: #222222;
 
 // Primitivos do Dark Theme
@@ -18,15 +18,6 @@ $dark-text-color-accent: #ffffff;
 // Font Families
 $font-family-sans: 'Google Sans Flex', Roboto, sans-serif;
 $font-family-code: 'Google Sans Code', Consolas, monospace;
-
-// Breakpoints Scale
-$breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-);
 
 // Gap Scale
 $gaps: (
@@ -40,4 +31,20 @@ $gaps: (
   8: 2rem,
   9: 2.5rem,
   10: 3rem,
+);
+
+$bui-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$bui-container-widths: (
+  sm: 540px,
+  md: 580px,
+  lg: 720px,
+  xl: 760px,
+  xxl: 810px,
 );
