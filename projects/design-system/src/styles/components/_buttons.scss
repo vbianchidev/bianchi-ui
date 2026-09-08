@@ -1,32 +1,18 @@
-@use '../variables' as vars;
+@use '../variables/' as vars;
+
 @use 'sass:map';
 
-$button-colors: (
-  normal: (
-    text: var(--bui-color-text),
-    hover-bg: var(--bui-color-container),
-    hover-bg-strong: var(--bui-color-container),
-    border: var(--bui-color-text),
-  ),
-  primary: (
-    text: var(--bui-color-primary),
-    hover-bg: var(--bui-color-container),
-    hover-bg-strong: var(--bui-color-container),
-    border: var(--bui-color-primary),
-  ),
-);
-
 @mixin button-color($variant) {
-  $c: map.get($button-colors, $variant);
+  $c: map.get(vars.$button, $variant);
 
   color: map.get($c, text) !important;
+  background-color: map.get($c, bg) !important;
 
-  &:hover {
-    background-color: map.get($c, hover-bg) !important;
-  }
-
+  &:hover,
   &:active {
-    background-color: map.get($c, hover-bg-strong) !important;
+    color: map.get($c, hover-text) !important;
+    background-color: map.get($c, hover-bg) !important;
+    border-color: map.get($c, hover-border) !important;
   }
 }
 
@@ -42,8 +28,8 @@ $button-colors: (
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition:
-    background-color 0.15s ease,
-    border-color 0.15s ease;
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 
   &:disabled {
     cursor: not-allowed;
@@ -70,12 +56,12 @@ $button-colors: (
 
   &:not(.primary) {
     @include button-color(normal);
-    border-color: map.get(map.get($button-colors, normal), border);
+    border-color: map.get(map.get(vars.$button, normal), border);
   }
 
   &.primary {
     @include button-color(primary);
-    border-color: map.get(map.get($button-colors, primary), border);
+    border-color: map.get(map.get(vars.$button, primary), border);
   }
 }
 

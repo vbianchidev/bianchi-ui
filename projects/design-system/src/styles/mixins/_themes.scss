@@ -31,6 +31,7 @@
 // Aplicação automática e via data-theme/classes
 :root {
   @include root-tokens;
+  --bui-color-transparent: transparent;
 }
 
 // Suporte automático para preferência do sistema operacional

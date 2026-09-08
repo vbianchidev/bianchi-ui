@@ -1,0 +1,18 @@
+$button: (
+  normal: (
+    text: var(--bui-color-text),
+    bg: var(--bui-color-transparent),
+    border: var(--bui-color-text),
+    hover-text: var(--bui-color-text-accent),
+    hover-bg: var(--bui-color-transparent),
+    hover-border: var(--bui-color-accent),
+  ),
+  primary: (
+    text: var(--bui-color-text),
+    bg: var(--bui-color-transparent),
+    border: var(--bui-color-text),
+    hover-text: var(--bui-color-primary),
+    hover-bg: var(--bui-color-transparent),
+    hover-border: var(--bui-color-primary),
+  ),
+);
