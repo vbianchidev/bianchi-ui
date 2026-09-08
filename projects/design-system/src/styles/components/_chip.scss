@@ -1,0 +1,5 @@
+@use '../mixins' as mixins;
+
+.bui-chip {
+  @include mixins.chip();
+}

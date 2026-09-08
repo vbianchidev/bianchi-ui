@@ -1,0 +1,11 @@
+@mixin chip() {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--bui-color-text-accent);
+  border-radius: 0.5rem;
+  color: var(--bui-color-text-accent);
+}
