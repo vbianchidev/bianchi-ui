@@ -1,0 +1,12 @@
+:host {
+  display: block;
+
+  .bui-accordion {
+    width: 100%;
+
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+
+    overflow: hidden;
+  }
+}

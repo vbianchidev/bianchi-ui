@@ -1,0 +1,48 @@
+:host {
+  display: block;
+}
+
+.bui-accordion-item {
+  border-bottom: 1px solid var(--bui-color-border, #ddd);
+}
+
+:host:last-child .bui-accordion-item {
+  border-bottom: 0;
+}
+
+.bui-accordion-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 1rem;
+
+  border: 0;
+  background: transparent;
+
+  color: inherit;
+  font: inherit;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.bui-accordion-item__header:hover {
+  background: var(--bui-color-surface-hover, rgba(0, 0, 0, 0.04));
+}
+
+.bui-accordion-item__icon {
+  font-size: 1.25rem;
+  line-height: 1;
+
+  transition: transform 150ms ease;
+}
+
+.bui-accordion-item__icon--open {
+  transform: rotate(45deg);
+}
+
+.bui-accordion-item__content {
+  padding: 0 1rem 1rem;
+}

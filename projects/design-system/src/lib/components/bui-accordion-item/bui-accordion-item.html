@@ -1,0 +1,26 @@
+<div class="bui-accordion-item">
+  <button
+    type="button"
+    class="bui-accordion-item__header"
+    [attr.aria-expanded]="isOpen()"
+    (click)="toggle()"
+  >
+    <span>
+      {{ title() }}
+    </span>
+
+    <span
+      class="bui-accordion-item__icon"
+      [class.bui-accordion-item__icon--open]="isOpen()"
+      aria-hidden="true"
+    >
+      +
+    </span>
+  </button>
+
+  @if (isOpen()) {
+    <div class="bui-accordion-item__content">
+      <ng-content />
+    </div>
+  }
+</div>
