@@ -1,0 +1,54 @@
+@use '../variables/' as vars;
+@use 'sass:map';
+
+@mixin link-color($variant) {
+  $c: map.get(vars.$button, $variant);
+
+  color: map.get($c, text);
+
+  &:hover,
+  &:active {
+    color: map.get($c, hover-text);
+  }
+}
+
+.bui-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+
+  &:not(.primary) {
+    @include link-color(normal);
+  }
+
+  &.primary {
+    @include link-color(primary);
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
